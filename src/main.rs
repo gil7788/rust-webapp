@@ -5,6 +5,7 @@ async fn greet(req: HttpRequest) -> impl Responder {
         req.match_info().get("name").unwrap_or("World");
     format!("Hello {}!", name)
 }
+
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
     println!("Hello, world!");
